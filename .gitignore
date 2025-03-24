@@ -1,2 +1,4 @@
-config
+*.conf
 fernet-key.ipynb
+__pycache__
+venv/

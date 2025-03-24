@@ -15,3 +15,16 @@ DATABASE_PASSWORD = parser.get('database', 'database_password')
 
 INPUT_PATH = parser.get('file_paths', 'input_path')
 OUTPUT_PATH = parser.get('file_paths', 'output_path')
+
+POST_FIELDS = (
+    'id',
+    'title',
+    'selftext',
+    'author',
+    'num_comments',
+    'created_utc',
+    'over_18',
+    'url',
+    'spoiler',
+    'upvote_ratio'
+)

@@ -8,6 +8,7 @@ from airflow.operators.python import PythonOperator
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from pipelines.reddit_pipeline import reddit_pipeline
+from pipelines.azure_pipeline import upload_azure_pipeline
 
 
 default_args = {
@@ -34,5 +35,11 @@ extract = PythonOperator(
         'time_filter': 'day',
         'limit': 100
     },
+    dag=dag
+)
+
+upload_blob = PythonOperator(
+    task_id='azure_data_upload',
+    python_callable=upload_azure_pipeline,
     dag=dag
 )

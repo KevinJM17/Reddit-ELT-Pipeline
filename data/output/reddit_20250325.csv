@@ -1,0 +1,528 @@
+id,title,selftext,author,num_comments,created_utc,over_18,spoiler,upvote_ratio
+1jintms,What makes a someone the 1% DE?,"So I'm new to the industry and I have the impression that practical experience is much more valued that higher education. One simply needs know how to program these systems where large amounts of data are processed and stored.   
+  
+Whereas getting a masters degree or pursuing phd just doesn't have the same level of necessaty as in other fields like quants, ml engineers ...
+
+So what actually makes a data engineer a great data engineer? Almost every DE with 5-10 years experience have solid experience with kafka, spark and cloud tools. How do you become the best of the best so that big tech really notice you? ",Same-Branch-7118,73,24-03-25 10:51,FALSE,FALSE,0.81
+1jiss37,Where i work there is no concept about costs optimization,"I work for a big corp, on a migration project to the cloud, the engineering team is huge, it seems like there is no concept of costs, like they don't even think of ""this code is expensive, we should remodel it"" etc , maybe because they have lot of money to spend that they don't even care about the costs.",HMZ_PBI,25,24-03-25 15:03,FALSE,FALSE,0.98
+1jiva8y,What actually defines a DataFrame?,"I fear this is more a philosophical question then a technical one but I am a bit confused. I’ve been thinking a lot about what makes something a DataFrame, not just in terms of syntax or library, but from a conceptual standpoint.
+
+My current definition is as such:
+
+>A DataFrame is a language native, programmable interface for querying and transforming tabular data. Its designed to be embedded directly in general purpose programming workflows.
+
+I like this because it focuses on what a DataFrame *is for*, rather than what specific tools or libraries implement it.
+
+I think however that this definition is too general and can lead to anything tabular with an API being described as a DF.
+
+  
+Properties that are not exclusive across DataFrames which I previously thought defined them:
+
+* mutability
+   * pandas: mutable, you can add/remove/overwrite columns directly.
+   * Spark DataFrames: immutable, transformations return new logical plans.
+   * Polars (lazy mode): immutable, transformations build a new plan.
+* execution model
+   * pandas: eager, executes immediately.
+   * Spark / Polars (lazy): lazy, builds DAGs and executes on trigger.
+* in memory
+   * pandas / polars: usually in-memory.
+   * Spark: can spill to disk or operate on distributed data.
+   * Ibist: abstract, backend might not be memory-bound at all.
+
+Curious how others would describe and define DataFrames.  
+",Senior_Way8692,19,24-03-25 16:45,FALSE,FALSE,0.8
+1jilwvk,Feeling stuck in current role due to a weird tech stack (UK),"Main ETL tools I use is Apache Nifi, SQL Server and visualisations are done in Grafana or Power BI. This was decided by the business before I got promoted to DE from a graduate role.
+
+I'm coming upto 4 years Data Engineering experience and stuck on a measly £36k. Trying to land a new role to upskill with cloud apps but other employers seem hesitant to take me on as I don't work with Python daily and have no experience with Spark or Databricks. I've done a lot of personal projects with Python including replicating some use cases from work and I'm also undertaking my AWS Cloud Essential certification.
+
+Bit stuck on what to do really. Was hoping my drive for learning outside of work would help cover some of the specific gaps I have with tools but just doesn't seem to be the same. 
+
+",Brammerz,31,24-03-25 8:27,FALSE,FALSE,0.85
+1jir54z,"Automating PostgreSQL dumps to Aws RDS, feedback needed","I’m currently working on automating a data pipeline that involves PostgreSQL, AWS S3, Apache Iceberg, and AWS Athena. The goal is to automate the following steps every 10 minutes:
+
+Dumping PostgreSQL Data
+Using pg_dump to generate PostgreSQL database dumps.
+
+Uploading to S3
+The dump file is uploaded to an S3 bucket for storage and further processing.
+
+Converting Data into Iceberg Tables
+A Spark job is used to convert the data into Iceberg tables stored on S3 using the AWS Glue catalog.
+
+Running Spark Jobs for UPSERT/MERGE
+The Spark job is designed to perform UPSERT/MERGE operations every 10 minutes on the Iceberg tables.
+
+Querying with AWS Athena
+Finally, I’m querying the Iceberg tables using AWS Athena for analytics.
+
+Can anyone suggest the best setup, im not sure about services and looking for feedback to efficiently automate dumps and schedule spark jobs in glue.",Spiritual-Conflict15,5,24-03-25 13:51,FALSE,FALSE,0.95
+1jioh40,Microsoft Fabric Data Engineer Exam (DP-700) Prep Series on YouTube,"I know Microsoft Fabric isn't the most talked-about platform on this subreddit, but if you're looking to get certified or just explore what Fabric has to offer, I’m creating a free YouTube prep series for the DP-700: Microsoft Fabric Data Engineer Associate exam.
+
+The series is about halfway done and currently 10 episodes in, each \~30 minutes long. I’ve aimed to keep it practical and aligned with the official exam scope, covering both concepts and hands-on components.
+
+**What’s covered so far:**
+
+* Ep1: Intro
+* Ep2: Scope
+* Ep3: Core Structure & Terminology
+* Ep4: Programming Languages
+* Ep5: Eventstream
+* Ep6: Eventstream Windowing Functions
+* Ep7: Data Pipelines
+* Ep8: Dataflow Gen2
+* Ep9: Notebooks
+* Ep10: Spark Settings
+
+▶️ **Watch the playlist here:** [https://www.youtube.com/playlist?list=PLlqsZd11LpUES4AJG953GJWnqUksQf8x2](https://www.youtube.com/playlist?list=PLlqsZd11LpUES4AJG953GJWnqUksQf8x2)
+
+Hope it’s helpful to anyone dabbling in Fabric or working toward the cert. Feedback and suggestions are very welcome! :)",aleks1ck,1,24-03-25 11:32,FALSE,FALSE,0.75
+1jigk9j,Well-Designed Data Warehouse Examples,"I am working to restructure a legacy “data warehouse”. 
+
+Current state: Every table is directly copied directly from the application’s transactional database with slight name updates on the columns. Many of the tables are named with abbreviations and it is hard to decipher what they represent. The schema is the same for all of the tables. Hundreds of views have been created to be used for analytics.
+
+Desired state: We are going with the 3 layer model (medallion architecture). We want to use a mixture of Inmon and Kimball (if that is possible), where Inmon methodology represents the “lightly transformed” stage and we create star schemas for analytics in the consumption layer. 
+
+Can anyone direct me to a well-designed data warehouse that I can use as an example to help me out? I have been reading some books like “Database Design for Mere Mortals,” and it has helped me come up with some ideas, but any help is appreciated from someone who has done this before. For reference, there are a lot of different data topics that I work with: financials, safety, project management, etc.
+",7thG0D,4,24-03-25 2:28,FALSE,FALSE,0.91
+1jin77t,"Merge-on-Read vs Copy-on-Write in Apache Iceberg, critics?","I wrote a blog about merge on read and copy on write and conducted a small postgres benchmarking with iceberg. Thoughts? 
+
+Blog : [Merge-on-Read vs Copy-on-Write in Apache Iceberg](https://olake.io/iceberg/mor-vs-cow)",zriyansh,0,24-03-25 10:07,FALSE,FALSE,0.85
+1jivfi0,Do you think Fabric will eventually match the performance of competitors?,"I have not used Fabric before, but may be using it in the future. It appears that people in this sub overwhelmingly dislike it and consider it significantly inferior to competitors. 
+
+Is this more likely a case of it just being under-developed? With it becoming much more respectable and viable once it's more polished and complete.
+
+Or are the core components of the product so poor that it'll likely continue to be disliked for the foreseeable future?
+
+If I recall correctly, years ago, people disliked Power BI quite a bit when compared to something like Tableau. However, over time, the narrative shifted quite a bit and support plus popularity of BI increased drastically. I'm curious if Fabric will have a similar trajectory. 
+
+",Unusual_Midnight_243,19,24-03-25 16:51,FALSE,FALSE,0.82
+1jinyx2,"Apache Flink 2.0.0 is out and has deep integration with Apache Paimon - strengthening the Streaming Lakehouse architecture, making Flink a leading solution for real-time data lake use cases.","By leveraging Flink as a stream-batch unified processing engine and Paimon as a stream-batch unified lake format, the Streaming Lakehouse architecture has enabled real-time data freshness for lakehouse. In Flink 2.0, the Flink community has partnered closely with the Paimon community, leveraging each other’s strengths and cutting-edge features, resulting in significant enhancements and optimizations.
+
+* Nested projection pushdown is now supported when interacting with Paimon data sources, significantly reducing IO overhead and enhancing performance in scenarios involving complex data structures.
+* Lookup join performance has been substantially improved when utilizing Paimon as the dimensional table. This enhancement is achieved by aligning data with the bucketing mechanism of the Paimon table, thereby significantly reducing the volume of data each lookup join task needs to retrieve, cache, and process from Paimon.
+* All Paimon maintenance actions (such as compaction, managing snapshots/branches/tags, etc.) are now easily executable via Flink SQL call procedures, enhanced with named parameter support that can work with any subset of optional parameters.
+* Writing data into Paimon in batch mode with automatic parallelism deciding used to be problematic. This issue has been resolved by ensuring correct bucketing through a fixed parallelism strategy, while applying the automatic parallelism strategy in scenarios where bucketing is irrelevant.
+* For Materialized Table, the new stream-batch unified table type in Flink SQL, Paimon serves as the first and sole supported catalog, providing a consistent development experience.
+
+More about Flink 2.0 here: [https://flink.apache.org/2025/03/24/apache-flink-2.0.0-a-new-era-of-real-time-data-processing](https://flink.apache.org/2025/03/24/apache-flink-2.0.0-a-new-era-of-real-time-data-processing)",DevWithIt,2,24-03-25 11:01,FALSE,FALSE,0.87
+1jihy7n,Data Transfer —> on-prem server to S3,"Hi everyone,
+
+I need some advice on the most efficient way to transfer data from on-prem server to S3. 
+
+Total data that I want to move is around 400-600 TB. 
+
+I tried with python script but transferring even 1 GB of data is taking a lot of time (maybe due network limitations).
+
+Are there any recommended tools, AWS services or best practices to speed up the process?
+
+I read about Amazon’s DMS service but concerned about the cost.
+
+Would really appreciate any guidance!",Different-Ad-2901,17,24-03-25 3:45,FALSE,FALSE,0.81
+1jion6g,Data Engineer or Software Engineer?,"Hey everyone,
+
+I just started as a data engineer intern at a local company. My first project is building a tool where users ask a question, and an AI decides which API call to make to fetch data from the database and give an answer.
+
+I'm not really excited about this project since it's not what I want to focus on, but AI is a big trend right now, so I have no choice.
+
+My manager wants us to use **NestJS** instead of **FastAPI** to create API endpoints and do everything with JavaScript libraries (like LangchainJS) because he says NestJS is better for speed and scalability.
+
+I need advice—will this experience help me in my data engineering career, or am I basically doing software engineering now? The job description and intervieew all said ""data engineer,"" but this feels different.",0xAstr0,5,24-03-25 11:42,FALSE,FALSE,0.75
+1jisxkk,Simple Data Pipeline Project Walkthrough for Capturing Daily Weather Data and Loading it into Big Query using dlt running in a Cloud Function on GCP,[https://www.youtube.com/watch?v=nzUYsKlsHF4](https://www.youtube.com/watch?v=nzUYsKlsHF4),DataSling3r,0,24-03-25 15:09,FALSE,FALSE,1
+1jixwww,How to prepare data in a way that can scale up for ML?,"I'm currently working with a 1TB sensor/image training raw datasets. It takes a lot of time to prepare it for experimenting on ML. And also preparing different methods of indexing the data and reading functions. The issue is that I'm going to be scaling this up to around 1PB eventually with multimodal data. I'm not really sure how I can do this in a way that's not going to cause my ml to become overly complex and basically unreadable in the future.
+
+I know there's good practices for making things clean and modular but I don't really know where to find them. Usually the stuff I see has to deal more with tabular datasets. Or really beginner level stuff. Not much about file organization or how to properly like nest metadata, etc.",Altruistic-Bid4584,4,24-03-25 18:28,FALSE,FALSE,0.88
+1jiqnbd,Agentic AI Architecture,"Does anyone have pointers to what it takes/is needed for agentic AI capabilities, architecturally speaking?",Lower-Promotion930,3,24-03-25 13:27,FALSE,FALSE,1
+1jimy7w,What are the best data engineering certs to have as a DE contractor?,"I've been doing data engineering and data analytics for 5 years. I'm certified in Analytics CRM, so my contracts have been mainly focused on creating ETLs, reports and dashboards inside the Salesforce environment and any DB connected to it (GCP, Azure, AWS, on premise...). Unfortunately, I've been observing less and less demand for this niche, and the urge to put food on the table compels me to expand my proven expertise through obtaining new certifications. I know some people consider this a waste of money and time, but in my experience, I have to say it works as a way of attracting recruiters and skipping through some parts of the hiring process. 
+
+Which certs would you consider most valuable right now for a data engineer? After my personal experience with Salesforce and seeing how my employability is getting affected by their lack of care for its own product I'm considering more cloud agnostic solutions, like the Snowflake Core Certification.",HarnessingThePower,3,24-03-25 9:49,FALSE,FALSE,0.73
+1jj2p4p,"Dynamo DB, AWS S3, dbt pipeline","What are my best options/tips to create the following pipeline:
+
+1. Extract unstructured data from DynamoDB
+2. Load into AWS S3 bucket
+3. Use dbt to clean, transform, and model the data (also open to other suggestions)
+4. Use AWS Athena to query the data
+5. Metabase for visualization
+
+Use Case:
+
+`OrdersProd` table in DynamoDB, where records looks like this:
+
+{
+
+""id"": ""f8f68c1a-0f57-5a94-989b-e8455436f476"",
+
+""application\_fee\_amount"": 3.31,
+
+""billing\_address"": {
+
+""address1"": ""337 ROUTE DU ....."",
+
+""address2"": ""337 ROUTE DU ....."",
+
+""city"": ""SARLAT LA CANEDA"",
+
+""country"": ""France"",
+
+""country\_code"": ""FR"",
+
+""first\_name"": ""First Name"",
+
+""last\_name"": ""Last Name"",
+
+""phone"": ""+33600000000"",
+
+""province"": """",
+
+""zip"": ""24200""
+
+},
+
+""cart\_id"": ""8440b183-76fc-5df0-8157-ea15eae881ce"",
+
+""client\_id"": ""f10dbde0-045a-40ce-87b6-4e8d49a21d96"",
+
+""convertedAmounts"": {
+
+""charges"": {
+
+""amount"": 11390,
+
+""conversionFee"": 0,
+
+""conversionRate"": 0,
+
+""currency"": ""eur"",
+
+""net"": 11390
+
+},
+
+""fees"": {
+
+""amount"": 331,
+
+""conversionFee"": 0,
+
+""conversionRate"": 0,
+
+""currency"": ""eur"",
+
+""net"": 331
+
+}
+
+},
+
+""created\_at"": ""2025-01-09T17:53:30.434Z"",
+
+""currency"": ""EUR"",
+
+""discount\_codes"": \[
+
+\],
+
+""email"": ""[guy24.garcia@orange.fr](mailto:guy24.garcia@orange.fr)"",
+
+""financial\_status"": ""authorized"",
+
+""intent\_id"": ""pi\_3QfPslFq1BiPgN2K1R6CUy63"",
+
+""line\_items"": \[
+
+{
+
+""amount"": 105,
+
+""name"": ""Handball Spezial Black Yellow - 44 EU - 10 US - 105€ - EXPRESS 48H"",
+
+""product\_id"": ""7038450892909"",
+
+""quantity"": 1,
+
+""requiresShipping"": true,
+
+""tax\_lines"": \[
+
+{
+
+""price"": 17.5,
+
+""rate"": 0.2,
+
+""title"": ""FR TVA""
+
+}
+
+\],
+
+""title"": ""Handball Spezial Black Yellow"",
+
+""variant\_id"": ""41647485976685"",
+
+""variant\_title"": ""44 EU - 10 US - 105€ - EXPRESS 48H""
+
+}
+
+\],
+
+""metadata"": {
+
+""custom\_source"": ""my-product-form"",
+
+""fallback\_lang"": ""fr"",
+
+""source"": ""JUST"",
+
+""\_is\_first\_open"": ""true""
+
+},
+
+""phone"": ""+33659573229"",
+
+""platform\_id"": ""11416307007871"",
+
+""platform\_name"": ""#1189118"",
+
+""psp"": ""stripe"",
+
+""refunds"": \[
+
+\],
+
+""request\_id"": ""a41902fb-1a5d-4678-8a82-b4b173ec5fcc"",
+
+""shipping\_address"": {
+
+""address1"": ""337 ROUTE DU ......"",
+
+""address2"": ""337 ROUTE DU ......"",
+
+""city"": ""SARLAT LA CANEDA"",
+
+""country"": ""France"",
+
+""country\_code"": ""FR"",
+
+""first\_name"": ""First Name"",
+
+""last\_name"": ""Last Name"",
+
+""phone"": ""+33600000000"",
+
+""province"": """",
+
+""zip"": ""24200""
+
+},
+
+""shipping\_method"": {
+
+""id"": ""10664925626751"",
+
+""currency"": ""EUR"",
+
+""price"": 8.9,
+
+""taxLine"": {
+
+""price"": 1.48,
+
+""rate"": 0.2,
+
+""title"": ""FR TVA""
+
+},
+
+""title"": ""Livraison à domicile : 2 jours ouvrés""
+
+},
+
+""shopId"": ""c83a91d0-785e-4f00-b175-d47f0af2ccbc"",
+
+""source"": ""shopify"",
+
+""status"": ""captured"",
+
+""taxIncluded"": true,
+
+""tax\_lines"": \[
+
+{
+
+""price"": 18.98,
+
+""rate"": 0.2,
+
+""title"": ""FR TVA""
+
+}
+
+\],
+
+""total\_duties"": 0,
+
+""total\_price"": 113.9,
+
+""total\_refunded"": 0,
+
+""total\_tax"": 18.98,
+
+""updated\_at"": ""2025-01-09T17:53:33.256Z"",
+
+""version"": 2
+
+}
+
+As you can see, we have nested JSON structures (billing\_address, convertedAmounts, line\_items, etc.) and there's a mix of scalar values and arrays, so we might need separate this into multiple tables to have a clean data architecture, for example:
+
+* `orders` (core order information)
+* `order_items` (extracted from line\_items array)
+* `order_addresses` (extracted from billing/shipping addresses)
+* `order_payments` (payment-related details)",Judessaa,6,24-03-25 21:36,FALSE,FALSE,0.81
+1jixcue,Data Sharing Platform Designed for Non-Technical Users,"Hi folks- I'm building [Hunni](https://hunni.io/), a platform to simplify data access and sharing for non-technical users.  
+
+If anyone here has challenges with this at work, I'd love to chat.  If you'd like to give it a try, shoot me a message and I can set you up with our paid subscription and more data/file usage to play around. 
+
+Our target users are non-technical back/middle office teams often exchanging data and files externally with clients/partners/vendors via email or need a fast and easy way to access and share structured data internally. Our platform is great for teams that are living in Excel and often sharing Excel files externally - we have an excel add-in to access/manage data directly from Excel (anyone you share to can access the data for free through the web, excel add-in, or API).
+
+Happy to answer any questions :)",balldough,3,24-03-25 18:06,FALSE,FALSE,0.75
+1jivxcq,Redshift Spectrum vs Athena,"I have bunch of small Avro on S3 I need to build some data warehouse on top of that. With redshift the same queries takes 10x times longer in comparison to Athena. What may I do wrong?
+
+The final objective is to have this data in redshift Table.",Certain_Mix4668,9,24-03-25 17:10,FALSE,FALSE,0.76
+1jixduj,Need advice asap,"I was appointed a Data Engineer Intern, but I was switched from DE to Data Analysis and back when needed.  
+Also During the Data Analysis task allocation I was explained how to do the task without any tech lead (I know this happens in Start-ups but when your boss does not know anything about how much time it takes to do a task and a task which you have no idea how to do I was always explained how to do the task throw real-life scenarios like for example if I am to understand the pattern from a data of a machine I was given an example of a road and a CCTV camera and the person who sees the footage will understand that when an accident might happen by checking how the car is moving or the time of the day but those were human examples maybe I don't have the flare to understand these scenarios idk but to make me understand how to make this happen I don't have anyone and the tasks I have been doing are also not there in the internet. I would be scolded for not understanding and these tasks would be given to me and no one else. Other's tasks were different and they did not have to decode the CEO's message so they would do their tasks correctly and they seemed to be better due to this. This became a rant. Long story short I left the company after 1 year inc my 6 mo internship. I am not bitter at my teammates maybe a bit at my boss as I have obtained anxiety due to this toxic micro-management and now my hands tremble even after thinking about the job. Btw I did not get any salary for the last month I worked and my boss is not taking my calls etc so I mailed him. From a colleague, I got to know that due to my illness, I had taken a few days off in January so he will not give me my money. In those holidays I must include were days when I had been scolded for not doing my task fast enough (he has no idea how much time it takes as he changes the requirement on a whim) so I had to do the work all night and could not go to the office because I made myself ill due to this)  
+  
+I am at a loss as to what I should do.  
+I cannot say I have much experience in Data Analysis and after my experience, I am a bit reluctant to go to this field.  
+But Data Engineering is not an Entry level job and they need Hadoop Spark AWS etc which I have no experience with as I was only coding in Python and have a strong dbms and python base due to this I would fetch and insert data from and to the database tables through python code which would be scheduled by airflow dags.
+
+  
+I would like to know if should I switch to any other field.  
+I love to code that's why I would have liked to stay in Data Engineering also I have forgotten max of the software dev concepts so am unable to apply them anywhere.
+
+I have been applying to DE roles but have not got any reply(Linkedin, Glassdoor, Naukri).  
+Should I give myself time to brush up my coding skills(that too dsa etc things which come in the interviews I have forgotten due to no brushup which is a fault in my part), OS, CN.
+
+Or should I get certifications on the same?  
+I am getting anxious as I am not working and need a job too.",Original-Rest-982,2,24-03-25 18:07,FALSE,FALSE,0.81
+1jivuaz,Pyspark weird repartition distribution,"I was wondering if I can get some suggestions and explanation to the repartitioning results I'm seeing. I'm working on a pipeline where I need to partition the data because it is large and work on each partition concurrently.
+
+Imagine a dataset like:
+
+    data = [
+        (1, ""bob"", ""acct"", 202001),
+        (2, ""bob2"", ""acct"", 202001),
+        (3, ""bob3"", ""eng"", 202011),
+        (4, ""bob4"", ""data"", 202012),
+        (5, ""bob5"", ""acct"", 202501),
+    ]
+
+    schema = [""id"", ""name"", ""department"", ""joined_date""]
+    df = spark.createDataFrame(data, schema)
+    df = df.repartition(len(set(d[3] for d in data)), ""joined_date"")
+    df.foreachPartition(lambda it: print(list(it)))
+
+The above example prints out the partition distribution that I expect:
+
+    [Row(3, bob3, eng, 202011)]
+    [Row(1, bob, acct, 202001), Row(2, bob2, acct, 202001)]
+    [Row(4, bob4, data, 202012)]
+    [Row(5, bob5, acct, 202501)]
+
+But, if the data is:
+
+    data = [
+        (1, ""bob"", ""acct"", 202001),
+        (2, ""bob2"", ""acct"", 202001),
+        (3, ""bob3"", ""eng"", 202011),
+        (4, ""bob4"", ""data"", 202012),
+        (5, ""bob5"", ""acct"", 202002),
+    ]
+
+Then the distribution becomes (when I expect bob4 and bob5 to be in their own partition):
+
+    []
+    [Row(1, bob, acct, 202001), Row(2, bob2, acct, 202001)]
+    [Row(3, bob3, eng, 202011)]
+    [Row(4, bob4, data, 202012), Row(5, bob5, acct, 202002)]",jwsoju,0,24-03-25 17:06,FALSE,FALSE,0.81
+1jizvv3,[Off-topic] Seeking Guidance & Opportunities in Data Engineering,"Hey everyone,
+I know this isn’t exactly a job board, and I totally understand if this post feels a little out of place I just didn’t know where else to reach out.
+
+I’m currently in the U.S. doing my Master’s in Information (Data Track), and I’ve realized I really want to grow my career in data engineering. I have around 1.5 years of experience in data science, and through my coursework and projects, I’ve worked with things like Spark, PostgreSQL, and building pipelines.
+
+More than just getting a job, I’m looking for a place ideally a startup or somewhere fast-moving where I can learn like crazy, be part of something meaningful, and get my hands dirty solving real-world data problems. I’m super driven, curious, and honestly just excited to keep leveling up in this space.
+
+If anyone here has advice, leads, or is open to chatting, I’d be so grateful. Thanks for letting me share this here!",Historical-Egg-2422,2,24-03-25 19:45,FALSE,FALSE,0.76
+1jiwsyi,unzipping csv bigger than memory?,"i need to unzip a csv (50gb compressed, 300gb uncompressed) in azure blob storage, mounted on a virtual machine using blobfuse2.
+
+the virtual machine memory is 64gb and disk space is 128gb. unzipping from the CLI (on ubuntu) exceeds the disk space, which i assume is due to file caching?
+
+so i need to stream the unzipped data directly back to blob storage without caching, i think?
+
+i’ve been trying for hours to figure but to no avail. i’ve fiddled with every blobfuse2 setting i can find, but nothing fixes the issue.
+
+any ideas?
+
+thanks all!
+
+ps: i need to keep the csv as a single file (not my choice) and the process needs to occur weekly. speed doesn’t matter—as long as it completes within 24 hrs.
+",BigCountry1227,8,24-03-25 17:45,FALSE,FALSE,0.6
+1jiv89k,"Looking for testers for my AI data cleaning tool that's currently in beta! The tool takes large CSVs and either 1- identifies naming inconsistencies/abbreviations and converts to a single consistent format or 2- extracts specific data from text strings and converts it to structured, analyzable data.",If you have five minutes to spare I'd be so appreciative of the help! Let me know and I'll share the link.,Good_Guarantee6297,0,24-03-25 16:43,FALSE,FALSE,0.6
+1jiqp09,Survey,"Hello everyone,  
+I am doing a quick survey for my university on Information vs communication. It will take 5 minutes of your time and will be greatly appreciated if you could fill it out.  
+  
+Many thanks.  
+  
+[https://brookes.fra1.qualtrics.com/jfe/form/SV\_74HH3IH9a3eKBo2](https://brookes.fra1.qualtrics.com/jfe/form/SV_74HH3IH9a3eKBo2)",ArcDMax,0,24-03-25 13:29,FALSE,FALSE,0.67
+1jio2s0,Problems around Unstructured Data Processing for high accuracy usecases,"Hi everyone, wanted to know how you all are dealing with unstructured data extraction to make data LLM ready. There are some solutions out there of which Unstructured is the oldest one including some newer ones  (Reducto, Unsiloed, Pulse). Although not sure about how good are this from a prod-ready POV. Would appreciate inputs of folks who have tried any or all of these.",Confident_Dinner_872,0,24-03-25 11:07,FALSE,FALSE,0.67
+1jj6s1z,Need data engineers help for input on open source ETL/ELT tool we are building,"Hello Community,
+
+We released MVP for a open source ETL tool we have been working on
+
+mu-pipelines: [https://mosaicsoft-data.github.io/mu-pipelines-doc/getting-started/](https://mosaicsoft-data.github.io/mu-pipelines-doc/getting-started/)
+
+Through out my journey i was never a fan of UI driven tools that we have for ETL or vendor lock in closed code tool. So we built tool that we wish we had. It unlocks capabilities like add CI/CD, merge approvals etc and build and grow open source community.
+
+It is a python/pyspark based configuration driven ETL tool. I think of it as lego blocks: We build functionality with basic bricks like ingest, transform, destination and users can mix and match those bricks ( or bring their own brick) to create pipelines.
+
+For MVP we have basic functionality like read from CSV, sql transformation, write to CSV, delta, iceberg. We would like to add talk to data engineers, understand use case and then build on it. Please feel free add in comments, DM me or email us on [mupipelines@gmail.com](mailto:mupipelines@gmail.com).
+
+Thank you again for everyone willing to help.
+
+Looking forward to your inputs and feedback.
+
+https://preview.redd.it/29sm8h7fkqqe1.png?width=874&format=png&auto=webp&s=7cd4f433c941704b35c6ce48ec4362e0cb71b71c",Puzzleheaded-Dot8208,5,25-03-25 0:32,FALSE,FALSE,0.5
+1jiwxnf,New Release - Bacalhau 1.7 with Enterprise SSO and Partitioned Jobs,"Full disclosure: I'm co-founder :)  
+  
+[https://blog.bacalhau.org/p/announcing-bacalhau-17-empowering](https://blog.bacalhau.org/p/announcing-bacalhau-17-empowering)
+
+Another quarter, another MASSIVE release - this time, it's Bacalhau 1.7!  
+
+INCLUDES:
+
+* Enterprise SSO
+* Partitioned Jobs
+* Simplified licensing
+* More job templating, including through Expanso Cloud
+* And lots more...  
+
+We've seen folks save 25%+ on their data and processing jobs in the first WEEK after deployment.
+
+Tell us your thoughts!",Iron_Yuppie,0,24-03-25 17:50,FALSE,FALSE,0.5
+1jj401k,Keep or leave Ab Initio for good to become a DE?,"Hi DE, community I've been reading a lot of post in this sub, expecting to read more of Ab>I but it seems that other technologies overtake the conversations. I would like to get advice on various subjects, I'm currently unemployed due lack of positions as Ab>I Dev since January. I'm not from the US so there is only a few, but only for Juniors/Intern as I have 5+ yoe. I'm trying to keep on this path but seems like a long-term position crisis.
+
+Because of this I've been thinking to transition to DE but it's a start from 0, I feel very strange as I'm trying to learn everything at once to understand how a project might be built, coming from a ""low-code"" development tool. So, currently I've bought a couple courses for DE (PySpark, PL/SQL, Python, Snowflake, AWS Architecture), to understand the basics, also I have only touched SQL, but across these years I haven't written any query with more that 7 lines. Said this as a bit of context of personal situation I would like to ask the following
+
+\- how or when can I say I'm ready to apply for a DE Jr position, having only experience as Ab>I Dev
+
+\- how much time you have spent learning/writing your projects, did you go full 24/7 coding?
+
+\- how a mentoring works as I haven't had any  (beside the obvious)
+
+  
+I appreciate the advice, responses, etc. Have a good one :)",jpopgg,10,24-03-25 22:30,FALSE,FALSE,0.33
+1jitcd6,Is Microsoft Fabric a good choice in 2025?,"There’s been a lot of buzz around Microsoft Fabric. At **Datacoves**, we’ve heard from many teams wrestling with the platform and after digging deeper, we put together **10 reasons** why Fabric **might not be** the best fit for modern data teams.  Check it out if you are considering Microsoft Fabric.
+
+👉 \[Read the full blog post:[ Microsoft Fabric – 10 Reasons It’s Still Not the Right Choice in 2025](https://datacoves.com/post/what-is-microsoft-fabric)\]",Data-Queen-Mayra,12,24-03-25 15:26,FALSE,FALSE,0.42
+1jislsy,I'm trying to follow roadmap for DE and show his videos on it. What's you opinion?,I like his content but any other path recommendations if you can give.,Routine_Soil7562,13,24-03-25 14:56,FALSE,FALSE,0.36

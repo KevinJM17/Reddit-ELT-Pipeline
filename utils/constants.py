@@ -24,7 +24,6 @@ POST_FIELDS = (
     'num_comments',
     'created_utc',
     'over_18',
-    'url',
     'spoiler',
     'upvote_ratio'
 )

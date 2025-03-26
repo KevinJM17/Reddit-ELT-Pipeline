@@ -10,8 +10,12 @@ def create_container(blob_service_client, container_name:str):
     try:
         blob_service_client.create_container(name=container_name)
         print('Container created')
+    
     except ResourceExistsError:
         print('A container with this name already exists')
+
+    except Exception as e:
+        print(e)
 
 def upload_blob(blob_service_client, container_name:str, file_path:str, file_name:str):
     blob_client = blob_service_client.get_blob_client(container=container_name, blob=file_name)

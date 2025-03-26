@@ -18,9 +18,12 @@ def create_container(blob_service_client, container_name:str):
         print(e)
 
 def upload_blob(blob_service_client, container_name:str, file_path:str, file_name:str):
-    blob_client = blob_service_client.get_blob_client(container=container_name, blob=file_name)
-    print(f'Uploading {file_name} to Azure Storage as blob')
+    try:
+        blob_client = blob_service_client.get_blob_client(container=container_name, blob=file_name)
+        print(f'Uploading {file_name} to Azure Storage as blob')
+        # Upload the created file
+        with open(file=file_path, mode="rb") as data:
+            blob_client.upload_blob(data)
 
-    # Upload the created file
-    with open(file=file_path, mode="rb") as data:
-        blob_client.upload_blob(data)
+    except FileNotFoundError:
+        print('File not found')

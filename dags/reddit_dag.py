@@ -38,8 +38,11 @@ extract = PythonOperator(
     dag=dag
 )
 
+# Upload data to Azure
 upload_blob = PythonOperator(
     task_id='azure_data_upload',
     python_callable=upload_azure_pipeline,
     dag=dag
 )
+
+extract >> upload_blob

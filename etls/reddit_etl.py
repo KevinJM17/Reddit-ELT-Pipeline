@@ -15,7 +15,7 @@ def connect_reddit(client_secret, client_id, user_agent) -> Reddit:
         print(e)
         sys.exit(1)
 
-def extract_post(reddit_instance:Reddit, subreddit:str, time_filter:str, limit=None):
+def extract_post(reddit_instance: Reddit, subreddit: str, time_filter: str, limit=None):
     subreddit = reddit_instance.subreddit(subreddit)
     posts = subreddit.top(time_filter=time_filter, limit=limit)
     post_list = []
@@ -26,7 +26,7 @@ def extract_post(reddit_instance:Reddit, subreddit:str, time_filter:str, limit=N
 
     return post_list
 
-def transform_data(postdf:pd.DataFrame):
+def transform_data(postdf: pd.DataFrame):
     postdf['id'] = postdf['id'].astype(str)
     postdf['title'] = postdf['title'].astype(str)
     postdf['selftext'] = postdf['selftext'].astype(str)
@@ -42,5 +42,5 @@ def transform_data(postdf:pd.DataFrame):
     postdf['upvote_ratio'] = postdf['upvote_ratio'].astype(float)
     return postdf
 
-def export_to_csv(data:pd.DataFrame, path:str):
+def export_to_csv(data: pd.DataFrame, path: str):
     data.to_csv(path, index=False)

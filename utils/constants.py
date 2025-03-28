@@ -13,10 +13,6 @@ DATABASE_PORT = parser.get('database', 'database_port')
 DATABASE_USERNAME = parser.get('database', 'database_username')
 DATABASE_PASSWORD = parser.get('database', 'database_password')
 
-# aws_access_key_id = 
-# aws_secret_access_key= 
-# aws_session_token= [aws session token]
-# azure_region = uksouth
 AZURE_CONNECTION_STRING = parser.get('azure', 'azure_connection_string')
 AZURE_STORAGE_ACCOUNT_NAME = parser.get('azure', 'azure_storage_account_name')
 AZURE_CONTAINER_NAME = parser.get('azure', 'azure_container_name')

@@ -1,12 +1,17 @@
 from azure.core.exceptions import ResourceExistsError
 from azure.storage.blob import BlobServiceClient
 
-def connect_to_storage_account(connect_string:str):
-    # Create the BlobServiceClient object
-    blob_service_client = BlobServiceClient.from_connection_string(connect_string)
-    return blob_service_client
+def connect_to_storage_account(connect_string: str):
+    try:
+        # Create the BlobServiceClient object
+        blob_service_client = BlobServiceClient.from_connection_string(connect_string)
+        print('Connected to Azure Storage Account')
+        return blob_service_client
+    
+    except Exception as e:
+        print(e)
 
-def create_container(blob_service_client, container_name:str):
+def create_container(blob_service_client: BlobServiceClient, container_name: str):
     try:
         blob_service_client.create_container(name=container_name)
         print('Container created')

@@ -1,0 +1,262 @@
+id,title,selftext,author,num_comments,created_utc,over_18,spoiler,upvote_ratio
+1jkyt4i,It's just a small schema change 🦁😴🔨🐒🤡,,Adela_freedom,24,2025-03-27 07:56:13,False,False,0.98
+1jl60o1,Yet another vendor with their benchmark blog…,,rmoff,7,2025-03-27 15:03:53,False,False,0.99
+1jl0w0z,"Having one of those days where it feels like everything I touch is conspiring against me. Please share your annoyances with IDEs, databases, libraries, whatever, so I don’t feel as alone",,LonelyArmpit,8,2025-03-27 10:35:43,False,False,0.95
+1jkv4vp,Why OLAP Databases Might Not Be the Best Fit for Observability Workloads,"I’ve been working with databases for a while, and one thing that keeps coming up is how OLAP systems are being forced into observability use cases. Sure, they’re great for analytical workloads, but when it comes to logs, metrics, and traces, they start falling apart, low queries, high storage costs, and painful scaling.
+
+At Parseable, we took a different approach. Instead of using an already existing OLAP database as backend, we built a storage engine from the ground up optimized for observability: fast queries, minimal infra overhead, and way lower costs by leveraging object storage like S3.
+
+We recently ran ParseableDB through ClickBench, and the results were surprisingly good. Curious if others here have faced similar struggles with OLAP for observability. Have you found workarounds, or do you think it’s time for a different approach? Would love to hear your thoughts!
+
+[https://www.parseable.com/blog/performance-is-table-stakes](https://www.parseable.com/blog/performance-is-table-stakes)",PutHuge6368,10,2025-03-27 03:45:47,False,False,0.75
+1jl1ojt,I need some tips as a Data Engineer in my new Job,"Hi guys, Im a Junior Data Engineer
+
+After two weeks of interviews for a job offer, I eventually got a job as a Data Engineer with AWS in a SaaS Sales company.
+
+Currently they have no Data Engineers, no Data Infra, no Data Design. All they have it’s 25 year old historic data in their DBs (MySQL and MongoDB)
+
+The thing is I will be in charge of defining, designing and implementening a data infrastructure for analytics and ML and to be honest I dont know where to start before touching any line of code
+
+They know I dont have too much experience but I dont want to mess all up or feeling that Im deceiving the company in the first months
+",Moradisten,9,2025-03-27 11:27:49,False,False,0.86
+1jl44gg,"Mapped 82 articles from 62 sources to uncover the battle for subsea cable supremacy
+using Palantir [OC]",,boundless-discovery,2,2025-03-27 13:38:50,False,False,0.78
+1jlbq7y,Alternate to Data Engineer,"When I try to apply for data engineering job, I end up not applying because, employers actually looking for Spark Engineers, Tableau or Power BI engineers, GCP Engineers, Payment processing engineer etc. but they posted it as data engineers is so disappointing. 
+
+Why don’t they title as the nature of the work? Please share your thoughts. ",Accomplished_Cloud80,16,2025-03-27 19:07:52,False,False,0.69
+1jl0lpd,Databricks associate data engineer resources?,Hey guys I’m unsure which resources I should be using to pass the data bricks associate data engineering course. It mentions on the official page use the self paced related materials which add ups to 10 hours which can be found on https://www.databricks.com/training/catalog?languages=EN&search=data+ingestion+with+delta+lake .But I’ve also seen people use Data Engineer Learning Plan which is around 28 hours found: https://partner-academy.databricks.com/learn/learning-plans/10/data-engineer-learning-plan?generated_by=274087&hash=c82b3df68c59c8732806d833b53a2417f12f2574 . Any ideas which resource I should be using as I’m slightly confused ?,fraiser3131,4,2025-03-27 10:15:48,False,False,0.81
+1jlfanl,Am I expecting too much when trying to hire a Junior Data Engineer?,"Hi
+I'm a data manager (Team consist of engineers, analysts & DBA)
+Company is wanting more people to come into the office so I can't hire remote workers but can hire hybrid (3 days).
+I'm in a small city <100k pop, rural UK that doesn't have a tech sector really. Office is outside the city.
+
+
+I don't struggle to get applicants for the openings, it's just they're all usually foreign grad students who are on post graduate work visas (so get 2 years max out of them as we don't offer sponsorship), currently living in London saying they'll relocate, don't drive so wouldn't be able to get to the industrial estate to our office even if they lived in the city.
+
+
+Some have even blatantly used realtime AI to help them on the screening teams calls, others have great CVs but have just done copy & paste pipelines.
+
+
+To that end, I think in order to get someone that just meets the basic requirements of bum on a chair I think I've got to reassess what I expect juniors to be able to do.
+
+We're a Microsoft shop so ADF, Keyvault, Storage Accounts, SQL, Python Notebooks....
+Should I expect DevOps skills? How about NoSQL? Parquet, Avro? Working with APIs and OAuth2.0 in flows? Dataverse and power platform?
+
+
+
+",lebadoo,71,2025-03-27 22:10:21,False,False,0.59
+1jkvwbv,Best Practices For High Frequency Scraping in the Cloud,"I have 20-30 different urls I need to scrape continuously (around every second) for long periods of time during the day and night. A little bit unsure on the best way to set this up in the cloud for minimal costs, and most efficient approach. My current thought it is to throw python scripts for the networking/ingesting data on a VPS, but then totally not sure of the best way to store the data they collect? 
+
+Should I take a live approach and queue/buffer the data, put in parquet, and upload to object storage as it comes in? Or should I put directly in OLTP and then later run batch processing to put in a warehouse (or convert to parquet and put in object storage)? I don't need to serve the data to users. 
+
+I am not really asking to be told exactly what to do, but hoping from my scattered thoughts, someone can give a more general and clarifying overview of the best practices/platforms for doing something like this at low cost in cloud.",Vivid_Artichoke_6946,8,2025-03-27 04:29:50,False,False,1.0
+1jlb3en,"Stateful vs Stateless Stream Processing: Watermarks, Barriers, and Performance Trade-offs",,Ill_Force756,0,2025-03-27 18:35:13,False,False,1.0
+1jl87n2,The Confused Analytics Engineer,,Global-Ad-7760,4,2025-03-27 16:36:45,False,False,0.67
+1jl7m6l,Need help understanding the internals of Airbyte or Fivetran,"Hey folks, lately I’ve been working on ingesting some large tables into a data warehouse. 
+
+Our Python ELT infrastructure is still in it’s infancy so my approach just consisted of using Polars to read from the source and dump it into the target table. As you might have guessed, I started running into memory issues pretty quick. My natural course of action was to try and batch load the data. While this does work, it’s still pretty slow and not upto the speed I’m hoping for. 
+
+So, I started considering using a data ingestion tool like Airbyte, Fivetran or Sling. Then, I figured I could just try implementing a rudimentary version of the same, just without all the bells and whistles. And yes, I know I shouldn’t reinvent the wheel and I should focus on working with existing solutions. But this is something I want to try doing out of sheer curiosity and interest. I believe it’ll be a good learning experience and maybe even make me a better engineer by the end of it. If anyone is familiar with the internals of any of these tools, like the architecture, or how the data transfer happens, please help me out. ",YameteGPT,3,2025-03-27 16:11:39,False,False,0.9
+1jl3xlt,ELT tool with hybrid deployment for enhanced security and performance,"Hi folks,
+
+I'm an solo developer (previously an early engineer at very popular ELT product) who built an ELT solution to address challenges I encountered with existing tools around security, performance, and deployment flexibility.
+
+**What I've Built:**
+- A hybrid ELT platform that works in both batch and real-time modes (with subsecond latency using CDC, implemented without Debezium - avoiding its common fragility issues and complex configuration)
+- Security-focused design where worker nodes run within client infrastructure, ensuring that both sensitive data AND credentials never leave their environment - an improvement over many cloud solutions that addresses common compliance concerns
+- High-performance implementation in a JVM language with async multithreaded processing - benchmarked to perform on par with C-based solutions like HVR in tests such as Postgres-to-Snowflake transfers, with significantly higher throughput for large datasets
+- Support for popular sources (Postgres, MySQL, and few RESTful API sources) and destinations (Snowflake, Redshift, ClickHouse, ElasticSearch, and more)
+- Developer-friendly architecture with an SDK for rapid connector development and automatic schema migrations that handle complex schema changes seamlessly
+
+I've used it exclusively for my internal projects until now, but I'm considering opening it up for beta users. I'm looking for teams that:
+- Are hitting throughput limitations with existing EL solutions
+- Have security/compliance requirements that make SaaS solutions problematic
+- Need both batch and real-time capabilities without managing separate tools
+
+If you're interested in being an early beta user or if you've experienced these challenges with your current stack, I'd love to connect. I'm considering ""developing in public"" to share progress openly as I refine the tool based on real-world feedback.
+
+Thanks for any insights or interest!",seriousbear,1,2025-03-27 13:29:19,False,False,0.71
+1jl59c9,Loading multiple CSV files from an S3 bucket into AWS RDS Postgres database.,"Hello,
+
+ What is the best option to load multiple CSV files from an S3 bucket into AWS RDS Postgres database. Using the Postgres S3 extension (version 10.6 and above), aws\_s3.table\_import\_from\_s3 will let you load only one file at a time. We would be receiving 100 CSV files (few large ones) for every one hour and need to load these files into Postgres RDS. Tried to load through Lambda but it is timing out when the volume of data is huge. Appreciate any feedback on the best way to load multiple CSV files from S3 bucket to Postgres RDS.
+
+Thanks. ",Awsmason,7,2025-03-27 14:31:45,False,False,0.86
+1jkzkf0,How does one create Data Warehouse from scratch?,"Let's suppose I'm creating both OLTP and OLAP for a company. 
+
+What is the procedure or thought process of the people who create all the tables and fields related to the business model of the company?
+
+How does the whole process go from start till live ?
+
+I've worked as a BI Analyst for couple of months but I always get confused about how people create so much complex data warehouse designs with so many tables with so many fields.
+
+Let's suppose the company is of dental products manufacturing.",Pillstyr,28,2025-03-27 08:57:10,False,False,0.67
+1jkzhkz,Need some help on Fabric vs Databricks,"Hey guys. At my company we've been using Fabric to develop some small/PoC platforms for some of our clients. I, like a lot of you guys, don't really like Fabric as it's missing tons of features and seems half baked at best. 
+
+I'll be making a case that we should be using Databricks more, but I haven't used it that much myself and I'm not sure how best to get across that Databricks is the more mature product. Would any of you guys be able to help me out? Thinks I'm thinking:
+
+* Both Databricks and Fabric offer serverless SQL effectively. Is there any difference here?
+* I see Databricks as a code-heavy platform with Fabric aimed more at citizen developers and less-technical users. Is this fair to say?
+* Since both Databricks and Fabric offer Notebooks with Pyspark, Scala, etc. support what's the difference here, if any?
+* I've heard Databricks has better ML Ops offering than Fabric but I don't understand why.
+* I've sometimes heard that Databricks should only be used if you have ""big data"" volumes but I don't understand this since you have flexible compute. Is there any truth to this? Is Databricks expensive?
+* Since Databricks has Photon and AQE I expected it'd perform better than Fabric - is that true?
+* Databricks doesn't have native reporting support through something like PBI, which seems like a disadvantage to me compared to Fabric?
+* Anything else I'm missing?
+
+  
+Overall my ""pitch"" at the moment is that Databricks is more robust and mature for things like collaborative development, CI/CD, etc. But Fabric is a good choice if you're already invested in the Microsoft ecosystem, don't care about vendor lock-in, and are aware that it's still very much a product in development. I feel like there's more to say about Databricks as the superior product, but I can't think what else there is.",Cypher211,18,2025-03-27 08:50:42,False,False,0.67
+1jl9iq8,How I Created a Webpage Snapshot Archive Using an AI Scraper,,9millionrainydays_91,0,2025-03-27 17:30:18,False,False,0.81
+1jl59ry,How to setup a data infrastructure for a startup,"I have been hired in a startup that is like Linkedin. They hired me specifically to design and improve their pipelines and have better value through data. I have worked as a DE but have never designed a whole architecture. The current workflow looks like this 
+
+  
+Prod AWS RDS Aurora  -> AWS DMS -> DW AWS RDS Aurora -> Logstash -> Elastic Search -> Kibana 
+
+https://preview.redd.it/4xsq4bu9t8re1.png?width=1832&format=png&auto=webp&s=b70eeca2be1af84694a6d58b0a25ea5acfa441e1
+
+The Kibana dashboards are very bad, no proper visualizations so the business can't see trends and figure out the issues. Logstash is also a nuisance in my opinion.
+
+We are also using Mixpanel to have event trackers which are then stored in the DW using [Tray.io](http://Tray.io) 
+
+https://preview.redd.it/wixum0qat8re1.png?width=1338&format=png&auto=webp&s=5c6fff48b9ffffdab94c195f8f76ba06832c4464
+
+\-------------------------------------------------------------------------------------------------------  
+  
+  
+Here's my plan for now.   
+  
+We keep the DW as is. I will create some fact tables with the most important key metrics. Then use Quicksight to create better dashboards.
+
+
+
+Is this approach correct? Should there be any other things I should look into. The data is small, about 20GB even for the biggest table.   
+  
+  
+I am open to all suggestions and opinions from DEs who can help me take on this new role efficiently.",Most-Range-2724,2,2025-03-27 14:32:17,False,False,0.67
+1jl1imz,I have to build a plan to implement data governance for a big company and I'm lost,"I'm a data scientist in a large company (around 5,000 people), and my first mission was to create a model for image classification. The mission was challenging because the data wasn't accessible through a server; I had to retrieve it with a USB key from a production line. Every time I needed new data, it was the same process.
+
+Despite the challenges, the project was a success. However, I didn't want to spend so much time on data retrieval for future developments, as I did with my first project. So, I shifted my focus from purely data science tasks to what would be most valuable for the company. I began by evaluating our current data sources and discovered that my project wasn't an exception. I communicated broadly, saying, ""We can realize similar projects, but we need to structure our data first.""
+
+Currently, many Excel tables are used as databases within the company. Some are not maintained and are stored haphazardly on SharePoint pages, SVN servers, or individual computers. We also have structured data in SAP and data we want to extract from project management software.
+
+The current situation is that each data-related development is done by people who need training first or by apprentices or external companies. The problem with this approach is that many data initiatives are either lost, not maintained, or duplicated because departments don't communicate about their innovations.
+
+The management was interested in my message and asked me to gather use cases and propose a plan to create a data governance organization. I have around 70 potential use cases confirming the situation described above. Most of them involve creating automation pipelines and/or dashboards, with only seven AI subjects. I need to build a specification that details the technical stack and evaluates the required resources (infrastructure and human).
+
+At the same time, I'm building data pipelines with Spark and managing them with Airflow. I use PostgreSQL to store data and am following a medallion architecture. I have one project that works with this stack.
+
+My reflection is to stick with this stack and hire a data engineer and a data analyst to help build pipelines. However, I don't have a clear view of whether this is a good solution. I see alternatives like Snowflake or Databricks, but they are not open source and are cloud-only for some of them (one constraint is that we should have some databases on-premise).
+
+That's why I'm writing this. I would appreciate your feedback on my current work and any tips for the next steps. Any help would be incredibly valuable!",BlueberrySolid,4,2025-03-27 11:17:16,False,False,0.81
+1jljzrj,Extraction of specific data,"Hey everyone, I’m facing a massive data extraction challenge and need advice. I have to pull specific details (e.g., product approval status, analysis notes) from **5,000+ unstructured reports** across **20+ completely different formats** (some even have critical data embedded in images). The catch? There’s **zero standardization**—teams built these reports independently, with no consistency in structure or content. Security is non-negotiable: no leaks, transcription errors, or file corruption allowed, and my company (despite its size) won’t provide cloud access or powerful local hardware for GenAI. I’m stuck between ‘manual hell’ and finding a secure, on-premises automation solution that can handle text, images, and wild format variability without crashing. Any creative hacks, lightweight tools, or frameworks that could tackle this? Open-source OCR? Custom parsers? Or should I just embrace the chaos and start whipping up a manual army? Brutal honesty appreciated!",Frequent_Storage_883,0,2025-03-28 01:48:02,False,False,1.0
+1jljhkr,OLAP vs OLTP - data lakes and the three-layer architecture question,"Hey folks,
+
+I have a really simple question, and I feel kind of dumb asking it - it's ELI5 time.
+
+When you run your data lakes, or your three-layer architectures, what format is your data in for each stage?
+
+We're in Sql at the moment and it's really simple for me to use OLTP so that when I am updating an order record, I can just merge on that record.
+
+When I read about data lakes, and parquet, it sounds like you're uploading your raw and staging data in the columnar format files, and then actioning the stages in parquet, or in a data warehouse like snowflake or databricks.
+
+Isn't there a large performance issue when you need to update individual records in columnar storage?
+
+Wouldn't it be better for it to remain in row-based through to the point you want to aggregate results for presentation?
+
+I keep reading about how columnar storage is slow on write, fast on read, and wonder why it sounds like transformations aren't kept in a fast-write environment until the final step.  Am I missing something?",-crucible-,3,2025-03-28 01:22:29,False,False,1.0
+1jlc1pf,What tool do you wish you had? What's the most annoying problem you have to deal with on a day to day?,"I have tons of time to build open source tools but don't have much of an intuition for what engineers in the real world need because I am just a student lol.
+
+For some additional context, I'm going to intern at NVIDIA this summer working on enterprise software products. Ideally I would like to build MLOps tools and even more ideally involve NVIDIA technology so that I can prepare, but this isn't a hard requirement! Also feel free to suggest anything on the spectrum of small tools to very hard problems as I can find other students who are also free. I would appreciate any and all suggestions!",ilikehikingalot,13,2025-03-27 19:46:20,False,False,0.67
+1jlbinx,Ditch Terraform for native SQL in Snowflake?,"In our company we have a small snowflake instance as a datawarehouse works like a charm. Currently we have some objects in terraform and some in Snowflake SQL. 
+
+Our problem: Our terraform set up slows us down. We are very proficient in SQL but not that proficient in terraform and I personally never liked the tool. 
+
+So just ditch terraform and keep everything in devops and sql files? Our setup is not that complex and I easily get double to triple speed with just sql. What would you advice? ",Ok-Sentence-8542,3,2025-03-27 18:52:54,False,False,0.67
+1jl82lx,Uses for HDF5?,"Do people here still use HDF5 files at all?
+
+I only really see people talk of CSV or Parquet on this sub.
+
+I use them frequently for cases where Parquet seems like overkill to me and cases where the CSV file sizes are really large but now I'm thinking if I shouldn't?",msdamg,3,2025-03-27 16:30:58,False,False,0.67
+1jl2dmm,Need some help regarding a Big Data Project,"I need some advice regarding my big data project. The project is to collect a hundred thousand facebook profiles, each data point should be the 1000 neighbourhood graph of each selected profile (basically must have a 1000 different friends). Call the selected profiles centres, for each graph pick 500 nodes with highest number of followers and create a 500 dimensianal data where i-th dimension is the number of profiles the node wuth i-th maxiumum followers follow. All nodes with distance 1000 from the centre are linked if they are friends. Then using 10, 30, 50 PCs classify graphs that contain K100 (a clique of size 100)",HumanAlive125,0,2025-03-27 12:08:12,False,False,0.76
+1jkvf0x,Classification problem to identify if post is recipie or not.,"I am trying to develop a system that can automatically classify whether a Reddit post is a recipe or not, and perform sentiment analysis on the associated user comments to assess overall community feedback. As a beginner, which classification models would be suitable for implementing this functionality?  
+I have a small dataset of posts,comments,images, image/video links if any on the post",lo5ts0ul,1,2025-03-27 04:01:32,False,False,0.76
+1jkugx2,What would be the best way store polling data in file based storage?,So I have to store the multiple devices polling time-series data in efficient storage structure and more importantly best Data retrieval from the querying. I have to design the file based storage for that. What can be potential solutions? How to handle this large data and retrieveal optimization. Working in Golang.,Ok_Category_776,3,2025-03-27 03:09:12,False,False,0.76
+1jlk9w7,Check out new article on Mastering SQL Performance,"Found this new article on medium he is my friend Lets support him  
+[***LINK https://medium.com/p/eabbd926be17***](https://medium.com/p/eabbd926be17)",userman12334,0,2025-03-28 02:02:12,False,False,0.5
+1jlju21,Need help on Cloud Data Platform report template,"So I was asked to create report templates for a Data Platform (Data Lake with ELT from local database source and via FTP mostly) that is deployed on AWS.
+The project has not start but we need something to show to the client. 
+Can you guys give me some hint to start the work. 
+
+
+",Born-Ad-3483,1,2025-03-28 01:39:57,False,False,1.0
+1jlbf2y,Unexpectedly Unemployed After Early Release – Need Advice on Earning & Moving Forward,"I’m a 2024 pass out, trained as a Data Engineer. I worked at a private company for 6 months (including internship) but left due to low pay. I got an offer from TCS. I was told by HR that I needed to serve a 90-day notice period, but when I resigned, they unexpectedly released me in just 18 days. I had planned to join TCS after 3 months, but now it’s been 5 months (Oct 2024 - Mar 2025), and I’m still unemployed. This has been really frustrating as I’m now fully dependent on my parents and struggling to move forward.
+
+Looking for Advice on These Areas:
+
+How to Start Earning ASAP
+
+How to Get a Full-Time Job Faster",gray_banner9,1,2025-03-27 18:48:40,False,False,0.67
+1jkx2m2,Will a straight Data Engineering Degree be worth it in the future,"Hello, I am a current freshman in general engineering (the school makes us declare after our second semester) and I am currently deciding between electrical engineering vs data engineering. I am very interested in the future of data engineering and its application (particularly in the finance industry as I plan to minor in economics), however I am concerned about how valuable the degree will be the job market. Would I be better off just pursuing electrical engineering with a minor in economics and just going to grad school for data science?",DarkerKnight051,17,2025-03-27 05:46:51,False,False,0.57
+1jl6pns,Data engineering Perth/Australia,"Hi there, 
+
+I wanted to reach out and ask for some advice. I'm currently job hunting and preparing for data engineering interviews. 
+
+I was wondering if anyone could share some insights on how the technical rounds typically go, especially in Australia? What all is asked?
+
+Is there usually a coding round on python (like on LeetCode etc), or is it more focused on SQL, system design, or something else? Do they ask you to write a code or sql queries in person? 
+
+I'd really appreciate any guidance or tips anyone can share. Thank you!
+
+",illyousi0n,0,2025-03-27 15:33:30,False,False,0.5
+1jl238m,Worth learning Fabric to get a job,"I am jobless for the last 6 month after I finished my M.Sc. in Data Analysis (b/w low & medium rank college) after 2.5 years of experience in IT in a service based company. I have basic understanding of ADF, Azure Databricks, Synapse as I have watched 2 in-depth project videos. I was planning to give Azure Data Engineer Associate DP-203 exam but it is going to be discontinued. Now, I am preparing for DP700 Fabric Data Engineer Associate to get certified. I already have AI Fundaments & Azure Fundamentals certification. I also plan to give DP600 Fabric Analytics Engineer Associate. Will it improve my chances? is Fabric the next big thing? I need guidance. I am going in debt. Market is tough right now.",Electrical_Regret685,13,2025-03-27 11:52:09,False,False,0.46
+1jkvmnr,Data Engineer Lifecycle,Dive into my latest article on the Data Engineer Lifecycle! Discover valuable insights and tips that can elevate your understanding and skills in this dynamic field. Don’t miss out—check it out here: https://medium.com/@adityasharmah27/life-cycle-of-data-engineering-b9992936e998.,Super_Act_5816,1,2025-03-27 04:13:36,False,False,0.54
+1jl38z0,Is it worth it ?,"Hey, I'm getting into data engineering. Initially, I was considering software development, but seeing all the talk about AI potentially replacing dev jobs made me rethink. I don’t want to spend six years in a field only to end up with nothing. So, I started looking for areas that are less impacted by AI and landed on data engineering. The demand seems solid, and it’s not oversaturated.
+
+Is it worth going all in on this field? Or are there better options I should consider?
+
+I pick things up fast and adapt easily. Since you guys are deep in the industry, your insights of the market would really help me figure out my next move.",Not_the-Mama,9,2025-03-27 12:55:29,False,False,0.14
+1jl6eew,Firebolt just launched a new cloud data warehouse benchmark - the results are impressive,"The top-level conclusions up font:
+
+* 8x price-performance advantage over Snowflake
+* 18x price-performance advantage over Redshift
+* 6.5x performance advantage over BigQuery (price is harder to compare)
+
+If you want to do some reading:
+
+* [Press release on businesswire](https://www.businesswire.com/news/home/20250327327304/en/Firebolt-Introduces-FireScale---A-Benchmark-for-Low-LatencyHigh-Concurrency-Analytics-Workloads-to-Power-Data-and-AI-Applications)
+* [Benchmark announcement blog](https://www.firebolt.io/blog/introducing-firescale)
+* [Technical blog](https://www.firebolt.io/blog/firescale-benchmarks-a-deeper-dive)
+
+The tech blog importantly tells you all about how the results were reached. We tried our best to make things as fair and as relevant to the real-world as possible, which is why we're also publishing the queries, data, and clients we used to run the benchmarks into a public [GitHub repo](https://github.com/firebolt-db/benchmarks/).
+
+You're welcome to check out the data, poke around in the repo, and run some of this yourselves. Please do, actually, because you shouldn't blindly trust the guy who works for a company when he shows up with a new benchmark and says, ""hey look we crushed it!""",FireboltCole,10,2025-03-27 15:20:12,False,False,0.39
+1jkvzsq,What are the must-know Python libraries for data engineers?,"Hey everyone,  
+  
+I'm focusing on enhancing my Python skills specifically for data engineering and would really appreciate some insights from those with more experience. I realize Python's essential for ETL processes, data pipelines, and orchestration, but with so many libraries available, it can be overwhelming to identify the key ones to prioritize.
+
+https://preview.redd.it/sgnf86dvu5re1.png?width=800&format=png&auto=webp&s=25f1aaa580e38ffab2faf29cd127706439f4048c
+
+Here’s a quick overview of a few libraries that come up often:  
+  
+**🛠 ETL & Data Processing:**  
+\- pandas– Ideal for data manipulation and transformation.  
+\- pyarrow – Best for working with the Apache Arrow data format.  
+\- dask – Useful for parallel computing on larger datasets.  
+\- polars – A high-performance option compared to pandas.  
+  
+ **Orchestration & Workflow Management:**  
+\- Apache Airflow – The go-to for workflow automation.  
+\- Prefect – A modern alternative to Airflow that simplifies local execution.  
+  
+**💾Databases & Querying:**  
+\- SQLAlchemy – Excellent for SQL database interaction via ORM.  
+\- psycopg2 – A popular adapter for connecting to PostgreSQL.  
+\- pySpark – Essential if you’re working with Apache Spark.  
+  
+**🚀 Cloud & APIs:**  
+\- boto3 – The AWS SDK for managing various cloud resources.  
+\- google-cloud-storage – Great for working with Google Cloud Storage.  
+  
+**🔍 Data Validation & Quality:**  
+\- Great Expectations– Perfect for maintaining data quality within pipelines.  
+  
+I’d love to hear about any other Python libraries that you find indispensable in your day-to-day work. Looking forward to your thoughts! 🙌",Antique-Dig6526,5,2025-03-27 04:35:44,False,False,0.3

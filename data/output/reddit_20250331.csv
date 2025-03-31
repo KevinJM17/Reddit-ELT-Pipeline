@@ -1,0 +1,27 @@
+id,title,score,num_comments,author,created_utc,over_18,spoiler,upvote_ratio
+1jnrpd7,Does your company use both Databricks & Snowflake? How does the architecture look like?,67,35,NefariousnessSea5101,1743383537.0,False,False,0.95
+1jnuhdm,"Now, I know why am I struggling...",42,10,noSugar-lessSalt,1743392858.0,False,False,0.88
+1jo8l7i,Happy Monday,87,7,Vautlo,1743441585.0,False,False,0.95
+1jo0001,Prefect - too expensive?,41,45,thsde,1743416768.0,False,False,0.96
+1jnktzw,Passed DP-203 -- some thoughts on its retiring,31,3,EducatedEarthian-99,1743364094.0,False,False,0.84
+1jo7tps,what's your opinion?,9,14,BigCountry1227,1743439735.0,False,False,0.68
+1jo564b,Is using Snowflake for near real time or hourly events an overkill ?,11,12,finerius,1743433049.0,False,False,0.92
+1jnzyop,AWS Data Engineering from Azure,12,9,nifty60,1743416607.0,False,False,0.88
+1jo8vlk,DE roadmap,8,2,arvindspeaks,1743442266.0,False,False,0.64
+1jo9b0k,Operating systems and hardware available for employees in your company,5,6,VeryHardToFindAName,1743443313.0,False,False,1.0
+1jo2vxq,Date warehouse essentials guide,6,1,Super_Act_5816,1743426817.0,False,False,0.8
+1jnlm9u,"As a data analytics/data science professional, how much data engineering am I supposed to know? Any advice is greatly appreciated",4,7,CreditArtistic1932,1743366104.0,False,False,0.64
+1jo4hld,How do I manage dev/test/prod when using Unity Catalog for Medallion Architecture with dbt?,3,2,jfftilton,1743431264.0,False,False,0.81
+1jo8u27,Asking for different tools for SQL Server + SSIS project.,3,9,Brilliant_Breath9703,1743442170.0,False,False,1.0
+1jnymqg,Need Feedback on data sharing module,2,5,pirana04,1743410598.0,False,False,0.75
+1jnlsu5,Example for complex data pipeline,2,2,EliyahuRed,1743366576.0,False,False,0.67
+1jo9ir2,~33% faster Microsoft Fabric with e6data– Feedback Requested,1,0,e6data,1743443838.0,False,False,0.66
+1jo89r8,Ways to quickly get total rows?,0,0,Old_Tourist_3774,1743440814.0,False,False,0.5
+1jo2s2c,Cloud Pandit Azure Data Engineering course feedback or can we take !!,0,3,Pi_Pisces,1743426498.0,False,False,0.5
+1jnt6ir,Question about preprocessing two time-series datasets from different measurement devices,1,1,UsedExcitement5306,1743388398.0,False,False,0.57
+1jnqdug,First Major DE Project,1,2,scuffed12s,1743379357.0,False,False,0.57
+1jnq405,Unstructured to Structured,1,1,Fantastic-Cup-990,1743378531.0,False,False,0.53
+1jnrb6y,Data Camp Data engineering certification help,0,3,Bodhisattva-Wannabe,1743382277.0,False,False,0.43
+1jo4n51,Seeking Advice from DE: Taking a Career Break to Work & Travel in Australia,0,2,chongsurfer,1743431672.0,False,False,0.4
+1jo9iy9,🚀 𝐋𝐢𝐠𝐡𝐭𝐧𝐢𝐧𝐠 𝐂𝐨𝐧𝐭𝐚𝐢𝐧𝐞𝐫𝐬: 𝐒𝐮𝐩𝐞𝐫𝐜𝐡𝐚𝐫𝐠𝐞𝐝! 🌩️,0,2,DarkArrowUnchained,1743443853.0,False,False,0.33
+1jnmrm5,Data Stack,0,2,jb_nb,1743369088.0,False,False,0.25

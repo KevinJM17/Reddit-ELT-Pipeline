@@ -26,21 +26,5 @@ def extract_post(reddit_instance: Reddit, subreddit: str, time_filter: str, limi
 
     return post_list
 
-def transform_data(postdf: pd.DataFrame):
-    postdf['id'] = postdf['id'].astype(str)
-    postdf['title'] = postdf['title'].astype(str)
-    postdf['selftext'] = postdf['selftext'].astype(str)
-    postdf['author'] = postdf['author'].astype(str)
-    postdf['num_comments'] = postdf['num_comments'].astype(int)
-    postdf['created_utc'] = pd.to_datetime(postdf['created_utc'], unit='s')
-    postdf['over_18'] = np.where(
-        (postdf['over_18'] == False) | (postdf['over_18'] == 'False'), False, True
-    ).astype(bool)
-    postdf['spoiler'] = np.where(
-        (postdf['spoiler'] == False) | (postdf['spoiler'] == 'False'), False, True
-    ).astype(bool)
-    postdf['upvote_ratio'] = postdf['upvote_ratio'].astype(float)
-    return postdf
-
 def export_to_csv(data: pd.DataFrame, path: str):
     data.to_csv(path, index=False)

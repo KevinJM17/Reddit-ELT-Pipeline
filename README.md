@@ -1,4 +1,10 @@
 # Reddit-ELT-Pipeline
+[![Airflow](https://img.shields.io/badge/Airflow-blue.svg)](https://airflow.apache.org/docs/)
+[![Celery](https://img.shields.io/badge/Celery-green.svg)](https://docs.celeryq.dev/en/stable/getting-started/introduction.html)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-red.svg)](https://www.postgresql.org/docs/)
+[![Python](https://img.shields.io/badge/Python-blue.svg)](https://docs.python.org/3.11/)
+[![PySpark](https://img.shields.io/badge/PySpark-green.svg)](https://spark.apache.org/docs/latest/api/python/index.html)
+
 This project implements a scalable ETL (Extract, Transform, Load) pipeline for collecting, processing, and analyzing data from Reddit. The system is designed to handle large volumes of data efficiently by leveraging cloud-based storage, distributed task execution, and scalable processing.
 
 With Apache Airflow orchestrating the workflow, the pipeline extracts data from Reddit, processes it using PostgreSQL as an intermediate storage layer. The data is then stored in Azure Blob Storage before being loaded into Azure Databricks to perform the necessary data transformations.

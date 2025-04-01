@@ -4,8 +4,8 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-red.svg)](https://www.postgresql.org/docs/)
 [![Python](https://img.shields.io/badge/Python-blue.svg)](https://docs.python.org/3.11/)
 [![PySpark](https://img.shields.io/badge/PySpark-green.svg)](https://spark.apache.org/docs/latest/api/python/index.html)
-[![Azure Blob Storage](https://shields.io/badge/Azure%20Blob%20Storage-blue)](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python?tabs=connection-string%2Croles-azure-portal%2Csign-in-azure-cli&pivots=blob-storage-quickstart-scratch)
-[![Azure Databricks](https://img.shields.io/badge/Azure%20Databricks-red?style=flat-square)](https://learn.microsoft.com/en-us/azure/databricks/)
+[![Azure Blob Storage](https://shields.io/badge/Azure%20Blob%20Storage-blue.svg)](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python?tabs=connection-string%2Croles-azure-portal%2Csign-in-azure-cli&pivots=blob-storage-quickstart-scratch)
+[![Azure Databricks](https://img.shields.io/badge/Azure%20Databricks-red.svg)](https://learn.microsoft.com/en-us/azure/databricks/)
 
 This project implements a scalable ETL (Extract, Transform, Load) pipeline for collecting, processing, and analyzing data from Reddit. The system is designed to handle large volumes of data efficiently by leveraging cloud-based storage, distributed task execution, and scalable processing.
 

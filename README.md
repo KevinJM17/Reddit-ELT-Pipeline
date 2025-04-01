@@ -1,4 +1,5 @@
 # Reddit-ELT-Pipeline
+[![Reddit API](https://img.shields.io/badge/Reddit%20API-yellow.svg)]
 [![Airflow](https://img.shields.io/badge/Airflow-blue.svg)](https://airflow.apache.org/docs/)
 [![Celery](https://img.shields.io/badge/Celery-green.svg)](https://docs.celeryq.dev/en/stable/getting-started/introduction.html)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-red.svg)](https://www.postgresql.org/docs/)

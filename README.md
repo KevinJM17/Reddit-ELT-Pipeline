@@ -7,6 +7,7 @@
 [![PySpark](https://img.shields.io/badge/PySpark-green.svg)](https://spark.apache.org/docs/latest/api/python/index.html)
 [![Azure Blob Storage](https://shields.io/badge/Azure%20Blob%20Storage-blue.svg)](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python?tabs=connection-string%2Croles-azure-portal%2Csign-in-azure-cli&pivots=blob-storage-quickstart-scratch)
 [![Azure Databricks](https://img.shields.io/badge/Azure%20Databricks-red.svg)](https://learn.microsoft.com/en-us/azure/databricks/)
+[![Azure Data Factory](https://img.shields.io/badge/Azure%20Data%20Factory-blue.svg)](https://learn.microsoft.com/en-us/azure/data-factory/)
 
 This project implements a scalable ETL (Extract, Transform, Load) pipeline for collecting, processing, and analyzing data from Reddit. The system is designed to handle large volumes of data efficiently by leveraging cloud-based storage, distributed task execution, and scalable processing.
 
@@ -20,6 +21,7 @@ With Apache Airflow orchestrating the workflow, the pipeline extracts data from 
 - __Celery__: Facilitates distributed task execution, enhancing scalability and performance
 - __PostgreSQL__: Temporary data storage.
 - __Azure Blob Storage__: Raw data storage.
+- __Azure Data Factory__: Detects change in data and triggers Databricks to be run.
 - __Azure Databricks__: Perform necessary transformations on the data using PySpark.
 
 ## Setup

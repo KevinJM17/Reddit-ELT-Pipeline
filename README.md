@@ -18,7 +18,8 @@ With Apache Airflow orchestrating the workflow, the pipeline extracts data from 
 
 - __Reddit API__: Data source
 - __Apache Airflow__: Orchestrate the ETL process.
-- __Celery__: Facilitates distributed task execution, enhancing scalability and performance
+- __Celery__: Facilitates distributed task execution, enhancing scalability and performance.
+- __Redis__: Used as a message broker, allowing Celery to send and receive task updates.
 - __PostgreSQL__: Temporary data storage.
 - __Azure Blob Storage__: Raw data storage.
 - __Azure Data Factory__: Detects change in data and triggers Databricks to be run.

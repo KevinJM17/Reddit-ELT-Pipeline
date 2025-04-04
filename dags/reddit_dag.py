@@ -7,7 +7,7 @@ from airflow.operators.python import PythonOperator
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from pipelines.reddit_pipeline import reddit_pipeline
+from pipelines.reddit_pipeline import reddit_data_extract
 from pipelines.azure_pipeline import upload_azure_pipeline
 
 
@@ -28,7 +28,7 @@ dag = DAG(
 # Extract data from reddit
 extract = PythonOperator(
     task_id='reddit_data_extraction',
-    python_callable=reddit_pipeline,
+    python_callable=reddit_data_extract,
     op_kwargs={
         'file_name': f'reddit_{file_postfix}',
         'subreddit': 'dataengineering',
